@@ -1,0 +1,17 @@
+name: Hello World Workflow
+
+# Triggers the workflow on push events to the main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Echo Hello World
+        run: echo "Hello, World!"
